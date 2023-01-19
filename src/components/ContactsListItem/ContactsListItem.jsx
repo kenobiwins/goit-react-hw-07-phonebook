@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
-import { ListItem } from './ContactsListItem.styled';
+import { Avatar, ListItem } from './ContactsListItem.styled';
 import { Button } from 'BaseStyles/BaseStyles.styled';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
-export const ContactsListItem = ({ name, number, id }) => {
+export const ContactsListItem = ({ name, number, id, avatar }) => {
   const dispatch = useDispatch();
 
   return (
     <ListItem>
+      <Avatar src={avatar} alt={`${name} photo`} />
       {name}: {number}
       <Button
         onClick={() => {
