@@ -26,5 +26,6 @@ ContactsListItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
   // deleteData: PropTypes.func.isRequired,
 };
